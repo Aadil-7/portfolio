@@ -1,18 +1,24 @@
-*{
+    * {
     margin: 0;
     padding: 0;
-    font-family:'Aleo', serif;
+    font-family: 'Aleo', 'Segoe UI', serif;
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
     background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
-.main{
+a:focus,
+a:hover {
+    border-bottom: 2px solid #fff;
+    outline: none;
+}
+
+.main {
     position: relative;
     padding: 40px;
     height: 100vh;
@@ -24,43 +30,51 @@ body{
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
-.intro{
+
+.intro {
     padding: 10px;
     width: 500px;
 }
-.main .avatar{
+
+.main .avatar {
     border-radius: 0 0 50% 30%;
 }
 
-.intro h1{
+.main .avatar_sm {
+    display: none;
+}
+
+.intro h1 {
     font-size: 4rem;
     text-shadow: 0 5px 10px black;
     letter-spacing: 4px;
     color: #fff;
 }
 
-.intro p{
+.intro p {
     font-size: 25px;
     margin-top: 10px;
     letter-spacing: 2px;
     font-weight: bold;
 }
 
-.intro span{
+.intro span {
     color: aqua;
     letter-spacing: 4px;
     text-shadow: 0px 2px 5px black;
-    font-size:25px;
+    font-size: 25px;
     font-weight: 800;
 }
-.about{
+
+.about {
     min-width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
 }
-.aboutme{
+
+.aboutme {
     height: auto;
     padding: 40px;
     text-align: center;
@@ -70,27 +84,31 @@ body{
     justify-content: space-around;
     align-items: center;
 }
-h1{
+
+h1 {
     color: #fff;
     font-size: 2.5rem;
     letter-spacing: 2px;
     text-shadow: 0 2px 5px black;
 }
-.aboutme p{
+
+.aboutme p {
     color: black;
     font-size: 1.5rem;
     letter-spacing: 4px;
     font-weight: bold;
     margin-top: 40px;
 }
-.about .me{
+
+.about .me {
     position: absolute;
     top: 50%;
     left: 10px;
     width: 300px;
     transform: rotateY(180deg);
 }
-.aboutme a{
+
+.aboutme a {
     width: fit-content;
     text-decoration: none;
     font-size: 1.2rem;
@@ -102,28 +120,32 @@ h1{
     box-shadow: 0 1px 8px black;
     margin-top: 50px;
 }
-.aboutme a:hover{
-    background-color: rgb(223, 220, 220);
 
+.aboutme a:hover,.aboutme a:focus {
+    background-color: rgb(223, 220, 220);
+    border: none;
 }
-.techStacs{
+
+.techStacs {
     position: relative;
-    min-height: 100vh;
     min-width: 100vw;
     background: transparent;
     text-align: center;
-    padding: 40px;
+    padding: 60px;
+    margin: 60px auto 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.techStacs h1{
+
+.techStacs h1 {
     font-size: 2.5rem;
     letter-spacing: 2px;
     margin: 0 0 40px;
 }
-.mystacks{
+
+.mystacks {
     width: 80%;
     margin: 20px 0 40px;
     display: flex;
@@ -132,50 +154,60 @@ h1{
     flex-wrap: wrap;
     gap: 40px;
 }
-.techStacs .stack{
+
+.techStacs .stack {
     height: 140px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
-.stack p{
+
+.stack p {
     font-size: 1.5rem;
     letter-spacing: 2px;
 }
-#tailwind img{
+
+#tailwind img {
     margin-top: 20px;
 }
-.techStacs .stack img{
+
+.techStacs .stack img {
     width: 100px;
 }
-.downArrow{
+
+.downArrow {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    animation: jump 2s infinite ;
+    animation: jump 2s infinite;
 }
-.techStacs .me{
+
+.techStacs .me {
     position: absolute;
     bottom: 0;
     right: 1%;
     width: 270px;
     transform: rotateY(180deg);
 }
+
 @keyframes jump {
-    0%{
+    0% {
         margin-bottom: 10px;
     }
-    50%{
+
+    50% {
         margin-bottom: 25px;
     }
-    100%{
+
+    100% {
         margin-bottom: 10px;
     }
 }
-.projects{
-    min-height: 100vh;
+
+.projects {
+    height: auto;
     margin: 0;
     text-align: center;
     display: flex;
@@ -183,7 +215,8 @@ h1{
     align-items: center;
     justify-content: center;
 }
-.myprojects{
+
+.myprojects {
     margin: 20px auto;
     width: 100vw;
     display: flex;
@@ -191,7 +224,8 @@ h1{
     align-items: center;
     justify-content: center;
 }
-.projectCard{
+
+.projectCard {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -201,54 +235,276 @@ h1{
     transition: .5s;
     width: 90vw;
 }
-.projectCard img{
+
+.projectCard img {
     height: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 8px black;
 }
-.projectCard img:hover{
+
+.projectCard img:hover {
     transform: rotate(-3deg);
 }
-.imgholder{
+
+.imgholder {
     transition: 1s;
     transform: translateX(-100%);
     opacity: 0;
 }
-.proInfo{
+
+.proInfo {
     transition: .8s;
     transform: translateX(100%);
     opacity: 0;
 }
-.show{
+
+.show {
     transform: translateX(0%);
     opacity: 1;
+    transition-delay: .5s;
 }
-.projectCard h3, .projectCard p{
+
+.projectCard h3,
+.projectCard p {
     margin: 20px;
 }
-.projectCard h3{
+
+.projectCard h3 {
     letter-spacing: 3px;
     color: #fff;
     font-size: 2rem;
     text-shadow: 0 2px 4px black;
 }
 
-.projectCard p{
+.projectCard p {
     font-size: 1.2rem;
 }
-.projectCard a{
+
+.proInfo a {
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 2px;
-    margin: 0 20px;
-    color: darkred;
-
+    margin: 40px 10px;
+    padding: 15px 20px;
+    color: aqua;
+    text-decoration: none;
+    text-shadow: 0 1px 2px black;
+    background:rgba(255, 255, 255, .08);
+    box-shadow: 0 1px 4px black;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
 }
-::-webkit-scrollbar{
+
+form {
+    margin: 20px auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    width: 800px;
+    padding: 40px;
+    box-shadow: 0 2px 8px black;
+}
+
+.form_container h1 {
+    color: #fff;
+    text-shadow: 0 2px 5px black;
+    text-align: center;
+}
+
+form input,
+form button {
+    font-family: 'Aleo', 'Segoe UI', serif;
+    height: 35px;
+}
+
+form input,
+form textarea {
+    background: rgba(0, 0, 0, .7);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    width: 100%;
+    resize: none;
+    text-indent: 10px;
+    padding: 10px 0;
+    border: 0 solid;
+    box-shadow: none;
+    color: #fff;
+}
+
+form textarea {
+    border: 1px solid black;
+}
+
+form input:focus,
+form input:hover,
+form textarea:focus,
+form textarea:hover {
+    border: 1px solid aqua;
+    outline: none;
+    box-shadow: 0 1px 4px skyblue;
+}
+
+form button {
+    background-color: rgba(0, 0, 0, .5);
+    border: 1px solid black;
+    padding: 10px 20px;
+    align-self: flex-start;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+form button:focus,
+form button:hover {
+    border: 1px solid aqua;
+    outline: none;
+    color: aqua;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+footer {
+    text-align: center;
+    margin: 40px 0 0;
+    padding: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px black;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(5px);
+}
+
+footer a {
+    color: aqua;
+    text-decoration: none;
+    font-style: italic;
+}
+
+::-webkit-scrollbar {
     background: lightblue;
     width: 2px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
     background-color: black;
     size: 2px;
+}
+
+@media(max-width: 970px) {
+    .avatar {
+        display: none;
+    }
+
+    .main .avatar_sm {
+        position: absolute;
+        bottom: 0;
+        right: 50px;
+        display: inline-block;
+        width: 150px;
+    }
+
+    .aboutme {
+        padding: 10px;
+    }
+
+    .about .me {
+        width: 200px;
+        top: 65%;
+        left: 0;
+    }
+
+    .techStacs {
+        margin: 20px auto;
+    }
+
+    .techStacs .me {
+        width: 200px;
+    }
+
+    .myprojects .projectCard {
+        flex-direction: column;
+    }
+
+    .projectCard img {
+        height: fit-content;
+        width: 80vw;
+    }
+
+    form {
+        width: 80vw;
+    }
+}
+
+@media(max-width: 640px) {
+    .intro h1 {
+        font-size: 10vw;
+    }
+    .intro p {
+        font-size: 6vw;
+    }
+    .intro span {
+        font-size: 7vw;
+    }
+    .main .avatar_sm {
+        width: 30vw;
+        right: 10px;
+    }
+
+    .main .downArrow {
+        width: 35px;
+    }
+
+    .aboutme {
+        padding: 10px;
+    }
+    .aboutme p{
+        font-size: 6vw;
+        text-align: left;
+    }
+
+    .about .me {
+        top: 85%;
+        width: 30vw;
+    }
+
+    .about a {
+        padding: 10px 15px;
+        font-size: 4vw;
+    }
+
+    .techStacs .stack img {
+        width: 15vw;
+    }
+
+    .techStacs p {
+        font-size: 20px;
+    }
+
+    .techStacs .me {
+        width: 30vw;
+    }
+
+    .form_container h1 {
+        font-size: 30px;
+    }
+    form{
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
