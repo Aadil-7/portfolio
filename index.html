@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital@0;1&display=swap" rel="stylesheet"> -->
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <title>Aadil Bhusnur</title>
@@ -16,9 +16,9 @@
 <body>
     <div class="main">
         <div class="intro">
-            <h1>Hi, I'm Aadil Bhusnur</h1>
+            <h1 id="greeting">Hi, I'm Aadil Bhusnur</h1>
             <p>Based in Maharashtra I'm a <span>React Developer </span>who is fascinated with learning web technologies
-                and creating a user centered wesites/webapps.</p>
+                and building a user centered wesites/webapps.</p>
         </div>
         <img src="./imgs/hi.png" alt="avatar" class="avatar" width="300px">
         <img src="./imgs/hi (1).png" alt="avatar" class="avatar_sm">
@@ -83,7 +83,8 @@
                     <h3>FitnessPro</h3>
                     <p>RactJs based project, which fetches data from the API and display it to the user and unique
                         feature of this website is user can search excercises based on the category and can also search
-                        by typing muscle name equipment name or excercise name, this web app uses react router to travale in
+                        by typing muscle name equipment name or excercise name, this web app uses react router to
+                        travale in
                         between the different excercise details page.</p>
                     <a href="https://aadil-fitnesspro.netlify.app" target="_blank">See Live</a>
                     <a href="https://github.com/Aadil-7/Fitness_Pro" target="_blank">See Code</a>
@@ -95,7 +96,10 @@
                 </div>
                 <div class="proInfo">
                     <h3>Tenzies</h3>
-                    <p>ReactJs based project, its an game where user is asked to select the tiles with the same number and press the roll button to generat new numbers on unselecetd tiles, the app manages the state of all the tiles and delivers the message to user when he selects all the tiles with same number and alsocelebrates the win of the user by blowing confetti.</p>
+                    <p>ReactJs based project, its an game where user is asked to select the tiles with the same number
+                        and press the roll button to generat new numbers on unselecetd tiles, the app manages the state
+                        of all the tiles and delivers the message to user when he selects all the tiles with same number
+                        and also celebrates the win of the user by blowing confetti.</p>
                     <a href="https://aadil-tenzies.netlify.app" target="_blank">See Live</a>
                     <a href="https://github.com/Aadil-7/tenzies" target="_blank">See Code</a>
                 </div>
@@ -115,15 +119,31 @@
             </div>
         </div>
     </div>
-    <div class="form_container">
+    <div class="form_wraper">
         <h1>Let's Connect ? <br /> Drop me a message</h1>
-        <form action="">
-            <input type="text" placeholder="Name/Company">
-            <input type="email" required placeholder="Email *">
-            <input type="text" required placeholder="Subject *">
-            <textarea name="" id="" cols="30" rows="6" placeholder="Message"></textarea>
-            <button>Submit</button>
-        </form>
+        <div class="form_container">
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" required placeholder="Email *">
+                <input type="text" required placeholder="Subject *">
+                <textarea name="" id="" cols="30" rows="6" placeholder="Message"></textarea>
+                <button>Submit</button>
+            </form>
+            <div class="sucess_msg">
+                <h2 id="usrname">Hey, Aadil</h2>
+                <p id="msg"><span>Your message has been sent successfully</span> I will reach you as soon as possible, just make sure
+                    your E-mail id dont have any typo. <br /> Thank you!</p>
+                <p id="usremail">aadilbhusnur007@gmail.com</p>
+                <button>Resend Message</button>
+            </div>
+            <div class="err_msg">
+                <h2 id="usrname_err">Hey, Aadil</h2>
+                <p id="msg_err"><span>Looks like there is some issue with the network</span> you can try Resending message, or send
+                    me an e-mail at the below e-mail address. <br /> Thank you!</p>
+                <a href="mailto:aadilbhusnur007@gmail.com">aadilbhusnur007@gmail.com</a>
+                <br /><button>Resend Message</button>
+            </div>
+        </div>
     </div>
     <footer>Designed and Developed by <a href="https://github.com/aadil-7" target="_blank">Aadil-7</a></footer>
 </body>
