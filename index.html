@@ -122,23 +122,25 @@
     <div class="form_wraper">
         <h1>Let's Connect ? <br /> Drop me a message</h1>
         <div class="form_container">
-            <form>
-                <input type="text" placeholder="Name">
-                <input type="email" required placeholder="Email *">
-                <input type="text" required placeholder="Subject *">
-                <textarea name="" id="" cols="30" rows="6" placeholder="Message"></textarea>
+            <form action="https://formsubmit.co/aadilbhusnur007@gmail.com" method="POST">
+                <input type="text" id="sendername" placeholder="Name" name="name">
+                <input type="email" id="senderemail" required placeholder="Email *" name="email">
+                <input type="text" id="subject" required placeholder="Subject *" name="subject">
+                <textarea name="message" id="message" cols="30" rows="6" placeholder="Message"></textarea>
                 <button>Submit</button>
             </form>
             <div class="sucess_msg">
                 <h2 id="usrname">Hey, Aadil</h2>
-                <p id="msg"><span>Your message has been sent successfully</span> I will reach you as soon as possible, just make sure
+                <p id="msg"><span>Your message has been sent successfully</span> I will reach you as soon as possible,
+                    just make sure
                     your E-mail id dont have any typo. <br /> Thank you!</p>
                 <p id="usremail">aadilbhusnur007@gmail.com</p>
                 <button>Resend Message</button>
             </div>
             <div class="err_msg">
                 <h2 id="usrname_err">Hey, Aadil</h2>
-                <p id="msg_err"><span>Looks like there is some issue with the network</span> you can try Resending message, or send
+                <p id="msg_err"><span>Looks like there is some issue with the network</span> you can try Resending
+                    message, or send
                     me an e-mail at the below e-mail address. <br /> Thank you!</p>
                 <a href="mailto:aadilbhusnur007@gmail.com">aadilbhusnur007@gmail.com</a>
                 <br /><button>Resend Message</button>
