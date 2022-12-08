@@ -20,9 +20,9 @@ a:hover {
 
 .main {
     position: relative;
-    padding: 40px;
-    min-height: 100vh;
-    min-width: 100vw;
+    /* padding: 40px; */
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +30,8 @@ a:hover {
 }
 
 .intro {
-    padding: 10px;
+    /* padding: 10px; */
+    margin: 20px;
     width: 500px;
 }
 
@@ -65,6 +66,7 @@ a:hover {
 }
 
 .about {
+    margin: 30px auto;
     min-width: 100vw;
     display: flex;
     align-items: center;
