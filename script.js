@@ -22,8 +22,7 @@ const senderName = document.getElementById(`sendername`)
 const senderEmail = document.getElementById(`senderemail`)
 const subject = document.getElementById(`subject`)
 const message = document.getElementById(`message`)
-
-const formSubmitHandler = function(){
+const formSubmitHandler = function () {
     document.getElementById(`sender`).innerText = senderName.value
     senderName.value = ""
     senderEmail.value = ""
